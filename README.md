@@ -132,6 +132,25 @@ aws cloudformation describe-stacks \
     --output text
 ```
 
+## 📄 Sample Documents
+
+The `sample_documents/` directory contains example documents for testing:
+
+- **filled-invoice.pdf** - Complete business invoice with itemized services, calculations, and payment terms (best for demo)
+- **sample-invoice.pdf** - IRS Form 1040 tax form (demonstrates form field extraction)
+
+**For best results, upload documents with:**
+- Clear text and forms (invoices, receipts, tax forms)
+- Tables with structured data
+- Scanned documents or PDFs
+- Supported formats: PDF, PNG, JPG, TIFF
+
+**Great document sources for testing:**
+- Your own receipts or invoices
+- Bank statements
+- Medical lab results
+- Tax forms (W-2, 1040, etc.)
+
 ## 📝 Usage Examples
 
 ### Upload a Document for Processing
