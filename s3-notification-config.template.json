@@ -1,0 +1,42 @@
+{
+  "LambdaFunctionConfigurations": [
+    {
+      "Id": "ProcessPDFUploads",
+      "LambdaFunctionArn": "arn:aws:lambda:REGION:ACCOUNT_ID:function:STACK_NAME-processor",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "prefix",
+              "Value": "incoming/"
+            },
+            {
+              "Name": "suffix",
+              "Value": ".pdf"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "Id": "ProcessPNGUploads",
+      "LambdaFunctionArn": "arn:aws:lambda:REGION:ACCOUNT_ID:function:STACK_NAME-processor",
+      "Events": ["s3:ObjectCreated:*"],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "prefix",
+              "Value": "incoming/"
+            },
+            {
+              "Name": "suffix",
+              "Value": ".png"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
