@@ -136,9 +136,10 @@ aws cloudformation describe-stacks \
 
 The `sample_documents/` directory contains example documents for testing:
 
-- **simple-invoice.png** - Business invoice with itemized services and calculations (✅ **Works perfectly with Textract**)
-- **sample-invoice.pdf** - IRS Form 1040 tax form
-- **filled-invoice.pdf** - PDF invoice generated with reportlab
+- **simple-invoice.png** - Business invoice with itemized services and calculations (✅ **Works perfectly**)
+- **tax-form.png** - IRS Form 1040 converted to PNG (✅ **Works perfectly** - 1,412 blocks extracted)
+- **sample-invoice.pdf** - IRS Form 1040 as PDF (❌ **Fails** - PDF format incompatible)
+- **filled-invoice.pdf** - PDF invoice generated with reportlab (❌ **Fails** - PDF format incompatible)
 
 ### ⚠️ Important: Document Format Compatibility
 
