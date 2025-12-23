@@ -88,6 +88,7 @@ def process_document_sync(bucket, document_key, document_id, upload_timestamp):
     print(f"Starting synchronous processing for {document_key}")
     
     try:
+        # Use S3 reference for synchronous processing (more efficient)
         response = textract_client.analyze_document(
             Document={
                 'S3Object': {
